@@ -16,7 +16,8 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                sh 'sudo rm -r *;sudo git clone https://github.com/jdoshi110/ec2_standalone.git'
+                sh 'sudo rm -rf .terraform';
+                sh 'sudo git clone https://github.com/jdoshi110/ec2_standalone.git'
             }
         }
         stage('terraform init') {
