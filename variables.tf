@@ -22,7 +22,7 @@ variable "key_name" {
 default = "us-west"
 }
 
-variable "aws_acces_key" {
+variable "aws_access_key" {
 }
 
 variable "aws_secret_key" {
