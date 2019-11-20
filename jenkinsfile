@@ -16,13 +16,12 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                sh 'sudo rm -rf .terraform';
-                sh 'sudo git clone https://github.com/jdoshi110/ec2_standalone.git'
+                sh 'sudo cd /home/ec2-user/ec2_standalone';
+                sh 'sudo git pull'
             }
         }
         stage('terraform init') {
             steps {
-                sh 'cd ec2_standalone/';
                 sh 'terraform init'
             }
         }
