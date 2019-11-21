@@ -28,7 +28,7 @@ pipeline {
         }
         stage('terraform plan') {
             steps {
-                sh 'sudo terraform plan -var aws_access_key=${params.aws_access_key} -var aws_secret_key=${params.aws_secret_key}'
+                sh 'sudo terraform plan'
             }
         }
         stage('terraform ended') {
