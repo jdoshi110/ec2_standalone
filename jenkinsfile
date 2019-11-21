@@ -33,7 +33,7 @@ pipeline {
         }
         stage('terraform apply') {
             steps {
-                'sudo terraform apply'
+                sh 'sudo terraform apply'
                 sh 'echo "Ended....!!"'
             }
         }
