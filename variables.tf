@@ -23,9 +23,11 @@ default = "us-west"
 }
 
 variable "aws_access_key" {
+  default="AKIA3K2XUV3JOU3J6XJ4"
 }
 
 variable "aws_secret_key" {
+  default="tkaOuOEYtt4NEdV3KK7wg0w9ArxL1z0yTJQ9Drwe"
 }
 
 variable "user_data" {
