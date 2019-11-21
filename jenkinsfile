@@ -28,12 +28,12 @@ pipeline {
         }
         stage('terraform plan') {
             steps {
-                sh 'sudo terraform plan'
+                sh 'sudo terraform plan -out ec2.tfplan'
             }
         }
         stage('terraform apply') {
             steps {
-                sh 'sudo terraform apply'
+                sh 'sudo terraform apply ec2.tfplan'
                 sh 'echo "Ended....!!"'
             }
         }
