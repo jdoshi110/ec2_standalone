@@ -8,7 +8,14 @@ pipeline {
     }
 
     stages {
-
+        stage('IAM Role test') {
+            steps {
+                sh 'echo "*****************" '
+                sh '/usr/local/bin/aws2 s3 ls'
+                sh 'echo "*****************" '
+            }
+        }
+       
         stage('terraform started') {
             steps {
                 sh 'echo "Started...!" '
